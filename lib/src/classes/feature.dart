@@ -49,7 +49,7 @@ class GeoJSONFeature implements GeoJSON {
     return GeoJSONFeature(
       GeoJSONGeometry.fromMap(map['geometry']),
       properties: Map.castFrom(map['properties']),
-      id: map['geometryKey']!.toString(),
+      id: map['geometryKey']?.toString(),
       title: map['title'],
     );
   }
